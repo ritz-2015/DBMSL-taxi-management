@@ -23,7 +23,7 @@ class ActiveBooking():
         y_cordinate = int((screen_height / 2) - (frame_height / 2))
         self.main.geometry('{}x{}+{}+{}'.format(frame_width, frame_height, x_cordinate+50, y_cordinate+50))
         self.main.bind("<Escape>", lambda e:self.main.destroy())
-        self.main.iconbitmap("E:\College Assignments\Second Semester\Python\Taxi Booking System\Images\logo.ico")
+        self.main.iconbitmap("C:/Users/SAEE/OneDrive/Desktop/Ritama_College/Ritama_DBMS_miniproj/Taxi-Booking-System1-master/Taxi-Booking-System1-master/Images/logo.ico")
 
         font1 = customtkinter.CTkFont(family='Times New Roman', size=30, weight='bold')
 

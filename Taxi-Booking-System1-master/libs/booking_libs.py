@@ -26,7 +26,7 @@ class BookingLibs():
     def getTime(self):
         return self.time
 
-    def getDropoffaddress(self):
+    def getDropofaddress(self):
         return self.dropofaddress
 
     def getBookingstatus(self):

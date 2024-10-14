@@ -7,7 +7,7 @@ def insert_booking(bookingInfo):
     conn=None
     sql="""INSERT INTO booking(pickupaddress,date,time,dropofaddress,bookingstatus,cid,did) VALUES (%s,%s,%s,%s,%s,%s,%s)"""
     values=(bookingInfo.getPickupaddress(), bookingInfo.getDate(),
-            bookingInfo.getTime(), bookingInfo.getdropofaddress(), bookingInfo.getBookingstatus(),
+            bookingInfo.getTime(), bookingInfo.getDropofaddress(), bookingInfo.getBookingstatus(),
             bookingInfo.getCid(), bookingInfo.getDid())
     insertResult=False
 
@@ -34,7 +34,7 @@ def update_booking(bookingInfo):
     values=(bookingInfo.getPickupaddress(),
             bookingInfo.getDate(),
             bookingInfo.getTime(),
-            bookingInfo.getdropofaddress(),
+            bookingInfo.getDropofaddress(),
             bookingInfo.getBookingstatus(),
             bookingInfo.getCid(),
             bookingInfo.getDid(),
@@ -168,7 +168,7 @@ def update_customer_booking1(bookingInfo):
     values=(bookingInfo.getPickupaddress(),
             bookingInfo.getDate(),
             bookingInfo.getTime(),
-            bookingInfo.getdropofaddress(),
+            bookingInfo.getDropofaddress(),
             bookingInfo.getBookingid()
             )
     updatebookingResult=False
