@@ -114,7 +114,7 @@ class Admin_Payment():
         bookingid=Entry(self.main)
 
         pickupaddresstxt=Entry(self.main)
-        dropoffaddresstxt=Entry(self.main)
+        dropofaddresstxt=Entry(self.main)
         datetxt=Entry(self.main)
         timetxt=Entry(self.main)
 
@@ -176,7 +176,7 @@ class Admin_Payment():
                 c.drawString(0.5 * inch, 6.7 * inch, 'Pickup address: {}'.format(pickupaddresstxt.get()))
 
                 # Dropoff address
-                c.drawString(0.5 * inch, 6.4 * inch, 'Dropoff address: {}'.format(dropoffaddresstxt.get()))
+                c.drawString(0.5 * inch, 6.4 * inch, 'Dropoff address: {}'.format(dropofaddresstxt.get()))
 
                 # Date
                 c.drawString(0.5 * inch, 6.1 * inch, 'Date: {}'.format(datetxt.get()))
@@ -209,7 +209,7 @@ class Admin_Payment():
                 c.drawString(0.5 * inch, 4.7 * inch, 'From {}'.format(pickupaddresstxt.get()))
 
                 # Description data
-                c.drawString(0.5 * inch, 4.4 * inch, 'To {}'.format(dropoffaddresstxt.get()))
+                c.drawString(0.5 * inch, 4.4 * inch, 'To {}'.format(dropofaddresstxt.get()))
 
                 # Kilometer Data
                 c.drawString(2.5 * inch, 4.7 * inch, '{} KM'.format(kmtxt.get()))
@@ -271,7 +271,7 @@ class Admin_Payment():
 
         bookingTable = ttk.Treeview(tableFrame)
         bookingTable.pack(side=TOP, fill=BOTH,expand=True, padx=5, pady=5)
-        bookingTable['columns'] = ('cid', 'bookingid', 'did', 'name','credit', 'date', 'time', 'pickupaddress', 'dropoffaddress','drivername')
+        bookingTable['columns'] = ('cid', 'bookingid', 'did', 'name','credit', 'date', 'time', 'pickupaddress', 'dropofaddress','drivername')
         bookingTable.column('#0', width=0, stretch=0)
         bookingTable.column('cid', width=0, stretch=0)
         bookingTable.column('bookingid', width=0, stretch=0)
@@ -281,7 +281,7 @@ class Admin_Payment():
         bookingTable.column('date', width=120, anchor=CENTER)
         bookingTable.column('time', width=100, anchor=CENTER)
         bookingTable.column('pickupaddress', width=200, anchor=CENTER)
-        bookingTable.column('dropoffaddress', width=200, anchor=CENTER)
+        bookingTable.column('dropofaddress', width=200, anchor=CENTER)
         bookingTable.column('drivername', width=200, anchor=CENTER)
 
         bookingTable.heading('#0', text='', anchor=CENTER)
@@ -293,7 +293,7 @@ class Admin_Payment():
         bookingTable.heading('date', text="Date", anchor=CENTER)
         bookingTable.heading('time', text="Time", anchor=CENTER)
         bookingTable.heading('pickupaddress', text="Pickup Address", anchor=CENTER)
-        bookingTable.heading('dropoffaddress', text="Dropoff Address", anchor=CENTER)
+        bookingTable.heading('dropofaddress', text="Dropoff Address", anchor=CENTER)
         bookingTable.heading('drivername', text="Driver Name", anchor=CENTER)
 
 
@@ -303,7 +303,7 @@ class Admin_Payment():
             credittxt.delete(0, END)
             bookingid.delete(0, END)
             pickupaddresstxt.delete(0, END)
-            dropoffaddresstxt.delete(0, END)
+            dropofaddresstxt.delete(0, END)
             datetxt.delete(0, END)
             timetxt.delete(0, END)
 
@@ -314,7 +314,7 @@ class Admin_Payment():
             bookingid.insert(0, bookingTable.item(selectitem)['values'][1])
 
             pickupaddresstxt.insert(0, bookingTable.item(selectitem)['values'][7])
-            dropoffaddresstxt.insert(0, bookingTable.item(selectitem)['values'][8])
+            dropofaddresstxt.insert(0, bookingTable.item(selectitem)['values'][8])
             datetxt.insert(0, bookingTable.item(selectitem)['values'][5])
             timetxt.insert(0, bookingTable.item(selectitem)['values'][6])
 

@@ -148,13 +148,13 @@ class Driver_Dashboard():
             assinbookingframe2.pack(side=LEFT, fill=BOTH, padx=(0, 10), pady=10)
 
             bookingTable = ttk.Treeview(assinbookingframe2)
-            bookingTable['columns'] = ('bookingid', 'pickupaddress', 'date', 'time', 'dropoffaddress', 'name', 'bookingstatus')
+            bookingTable['columns'] = ('bookingid', 'pickupaddress', 'date', 'time', 'dropofaddress', 'name', 'bookingstatus')
             bookingTable.column('#0', width=0, stretch=0)
             bookingTable.column('bookingid', width=100, anchor=CENTER)
             bookingTable.column('pickupaddress', width=200, anchor=CENTER)
             bookingTable.column('date', width=100, anchor=CENTER)
             bookingTable.column('time', width=100, anchor=CENTER)
-            bookingTable.column('dropoffaddress', width=200, anchor=CENTER)
+            bookingTable.column('dropofaddress', width=200, anchor=CENTER)
             bookingTable.column('name', width=150, anchor=CENTER)
             bookingTable.column('bookingstatus', width=150, anchor=CENTER)
 
@@ -163,7 +163,7 @@ class Driver_Dashboard():
             bookingTable.heading('pickupaddress', text='Pickup address', anchor=CENTER)
             bookingTable.heading('date', text='Date', anchor=CENTER)
             bookingTable.heading('time', text='Time', anchor=CENTER)
-            bookingTable.heading('dropoffaddress', text='Dropoff address', anchor=CENTER)
+            bookingTable.heading('dropofaddress', text='Dropoff address', anchor=CENTER)
             bookingTable.heading('name', text='Name', anchor=CENTER)
             bookingTable.heading('bookingstatus', text='Booking Status', anchor=CENTER)
 
@@ -508,13 +508,13 @@ class Driver_Dashboard():
 
         treeView=ttk.Treeview(centerFrame)
         treeView.pack(side=BOTTOM, fill=BOTH, expand=TRUE)
-        treeView['columns']=('bookingid','pickupaddress','date', 'time','dropoffaddress','name','bookingstatus')
+        treeView['columns']=('bookingid','pickupaddress','date', 'time','dropofaddress','name','bookingstatus')
         treeView.column('#0', width=0, stretch=0)
         treeView.column('bookingid', width=100, anchor=CENTER)
         treeView.column('pickupaddress', width=100, anchor=CENTER)
         treeView.column('date', width=100, anchor=CENTER)
         treeView.column('time', width=100, anchor=CENTER)
-        treeView.column('dropoffaddress', width=100, anchor=CENTER)
+        treeView.column('dropofaddress', width=100, anchor=CENTER)
         treeView.column('name', width=100, anchor=CENTER)
         treeView.column('bookingstatus', width=100, anchor=CENTER)
 
@@ -523,7 +523,7 @@ class Driver_Dashboard():
         treeView.heading('pickupaddress', text='Pickup address', anchor=CENTER)
         treeView.heading('date', text='Date', anchor=CENTER)
         treeView.heading('time', text='Time', anchor=CENTER)
-        treeView.heading('dropoffaddress', text='Dropoff address', anchor=CENTER)
+        treeView.heading('dropofaddress', text='Dropoff address', anchor=CENTER)
         treeView.heading('name', text='Name', anchor=CENTER)
         treeView.heading('bookingstatus', text='Booking Status', anchor=CENTER)
 

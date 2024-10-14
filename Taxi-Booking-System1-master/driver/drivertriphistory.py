@@ -54,14 +54,14 @@ class DriverHistory():
 
         treeView=ttk.Treeview(self.main)
         treeView.pack(side=BOTTOM, fill=BOTH, expand=True)
-        treeView['columns']=('cid', 'name','date', 'time','pickupaddress','dropoffaddress')
+        treeView['columns']=('cid', 'name','date', 'time','pickupaddress','dropofaddress')
         treeView.column('#0', width=0, stretch=0)
         treeView.column('cid', width=100, anchor=CENTER)
         treeView.column('name', width=100, anchor=CENTER)
         treeView.column('date', width=100, anchor=CENTER)
         treeView.column('time', width=100, anchor=CENTER)
         treeView.column('pickupaddress', width=100, anchor=CENTER)
-        treeView.column('dropoffaddress', width=100, anchor=CENTER)
+        treeView.column('dropofaddress', width=100, anchor=CENTER)
 
 
         treeView.heading('#0', text='', anchor=CENTER)
@@ -70,7 +70,7 @@ class DriverHistory():
         treeView.heading('date', text='Date', anchor=CENTER)
         treeView.heading('time', text='Time', anchor=CENTER)
         treeView.heading('pickupaddress', text='Pickup address', anchor=CENTER)
-        treeView.heading('dropoffaddress', text='Dropoff address', anchor=CENTER)
+        treeView.heading('dropofaddress', text='Dropoff address', anchor=CENTER)
 
 
         driverid=Entry(self.main)

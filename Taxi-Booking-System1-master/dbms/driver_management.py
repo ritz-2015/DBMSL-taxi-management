@@ -192,7 +192,7 @@ def select_alldriver():
 
 def driver_selectallbooking(did):
     conn=None
-    sql="""select booking.bookingid, booking.pickupaddress, booking.date, booking.time, booking.dropoffaddress,
+    sql="""select booking.bookingid, booking.pickupaddress, booking.date, booking.time, booking.dropofaddress,
      customers.name, booking.bookingstatus from booking inner join customers
       on booking.cid=customers.cid where booking.did=%s and booking.bookingstatus='Booked'"""
     values=(did,)
@@ -236,7 +236,7 @@ def driver_select_all22(name11):
 def driver_trip_history(did):
     conn=None
     sql="""select customers.cid, customers.name, booking.date, booking.time, 
-    booking.pickupaddress, booking.dropoffaddress from booking inner join customers
+    booking.pickupaddress, booking.dropofaddress from booking inner join customers
      on booking.cid=customers.cid where booking.did=%s and booking.bookingstatus='Billing Completed'"""
     values=(did,)
     driverResult=None

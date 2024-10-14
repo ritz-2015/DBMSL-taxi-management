@@ -54,10 +54,10 @@ class CustomerBillingHistory():
 
         treeView=ttk.Treeview(self.main)
         treeView.pack(side=BOTTOM, fill=BOTH, expand=True)
-        treeView['columns']=('pickupaddress', 'dropoffaddress','date', 'time','km','unit','total')
+        treeView['columns']=('pickupaddress', 'dropofaddress','date', 'time','km','unit','total')
         treeView.column('#0', width=0, stretch=0)
         treeView.column('pickupaddress', width=100, anchor=CENTER)
-        treeView.column('dropoffaddress', width=200, anchor=CENTER)
+        treeView.column('dropofaddress', width=200, anchor=CENTER)
         treeView.column('date', width=200, anchor=CENTER)
         treeView.column('time', width=200, anchor=CENTER)
         treeView.column('km', width=100, anchor=CENTER)
@@ -67,7 +67,7 @@ class CustomerBillingHistory():
 
         treeView.heading('#0', text='', anchor=CENTER)
         treeView.heading('pickupaddress',text='Pickup Address', anchor=CENTER)
-        treeView.heading('dropoffaddress', text='Dropoff Address', anchor=CENTER)
+        treeView.heading('dropofaddress', text='Dropoff Address', anchor=CENTER)
         treeView.heading('date', text='Date', anchor=CENTER)
         treeView.heading('time', text='Time', anchor=CENTER)
         treeView.heading('km', text='KM', anchor=CENTER)

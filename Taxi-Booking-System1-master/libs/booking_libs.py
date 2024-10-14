@@ -1,14 +1,14 @@
 
 class BookingLibs():
 
-    def __init__(self, bookingid=0, pickupaddress=None, date=None, time=None,dropoffaddress=None, bookingstatus=None,
+    def __init__(self, bookingid=0, pickupaddress=None, date=None, time=None,dropofaddress=None, bookingstatus=None,
                  cid=None, did=None):
 
         self.bookingid=bookingid
         self.pickupaddress=pickupaddress
         self.date=date
         self.time=time
-        self.dropoffaddress=dropoffaddress
+        self.dropofaddress=dropofaddress
         self.bookingstatus=bookingstatus
         self.cid=cid
         self.did=did
@@ -27,7 +27,7 @@ class BookingLibs():
         return self.time
 
     def getDropoffaddress(self):
-        return self.dropoffaddress
+        return self.dropofaddress
 
     def getBookingstatus(self):
         return self.bookingstatus
@@ -50,8 +50,8 @@ class BookingLibs():
     def setTime(self, time):
         self.time=time
 
-    def setDropoffaddress(self, dropoffaddress):
-        self.dropoffaddress=dropoffaddress
+    def setDropoffaddress(self, dropofaddress):
+        self.dropofaddress=dropofaddress
 
     def setBookingstatus(self, bookingstatus):
         self.bookingstatus=bookingstatus
@@ -63,4 +63,4 @@ class BookingLibs():
         self.did=did
 
     def __str__(self):
-        return ('{},{},{},{},{},{},{},{}'.format(self.bookingstatus, self.pickupaddress, self.date, self.time, self.dropoffaddress, self.bookingstatus, self.cid, self.did))
+        return ('{},{},{},{},{},{},{},{}'.format(self.bookingstatus, self.pickupaddress, self.date, self.time, self.dropofaddress, self.bookingstatus, self.cid, self.did))

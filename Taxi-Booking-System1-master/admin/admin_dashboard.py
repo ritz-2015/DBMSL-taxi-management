@@ -344,7 +344,7 @@ class Admin_Dashboard(customtkinter.CTk):
                     else:
                         updatebooking = BookingLibs(pickupaddress=picuptxt.get(),
                                                     date=date_txt.get(), time=pickuptxt.get(),
-                                                    dropoffaddress=dropoff_txt.get(),
+                                                    dropofaddress=dropoff_txt.get(),
                                                     cid=customerid.get(), bookingstatus='Booked',
                                                     did=driveridcombo.get(),
                                                     bookingid=bookingid.get())

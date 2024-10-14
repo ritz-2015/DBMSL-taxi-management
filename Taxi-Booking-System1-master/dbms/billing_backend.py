@@ -30,7 +30,7 @@ def insert_billing(billingID):
 def billing_table():
     conn=None
     sql="""select customers.cid, booking.bookingid,drivers.did, customers.name,customers.credit, booking.date,
-    booking.time, booking.pickupaddress, booking.dropoffaddress, drivers.name from booking
+    booking.time, booking.pickupaddress, booking.dropofaddress, drivers.name from booking
      left join customers on booking.cid=customers.cid left join drivers on 
      booking.bookingid=drivers.did where booking.bookingstatus='Bill Pending'"""
     result=None
@@ -52,7 +52,7 @@ def billing_table():
 def billing_history12():
     conn=None
     sql="""select booking.bookingid, billing.name,booking.pickupaddress, 
-    booking.dropoffaddress,booking.date, booking.time, billing.km, 
+    booking.dropofaddress,booking.date, booking.time, billing.km, 
     billing.unit, billing.total from booking left join billing on 
     booking.bookingid=billing.bookingid left join customers on 
     booking.cid=customers.cid where booking.bookingstatus='Billing Completed'"""
@@ -75,7 +75,7 @@ def billing_history12():
 
 def customer_billing_history(custInfo):
     conn=None
-    sql="""select booking.pickupaddress, booking.dropoffaddress, booking.date,booking.time,
+    sql="""select booking.pickupaddress, booking.dropofaddress, booking.date,booking.time,
      billing.km, billing.unit, billing.total from booking inner join 
      billing on booking.bookingid=billing.bookingid where booking.cid=%s"""
     values=(custInfo,)

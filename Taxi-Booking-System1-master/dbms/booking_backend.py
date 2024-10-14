@@ -7,7 +7,7 @@ def insert_booking(bookingInfo):
     conn=None
     sql="""INSERT INTO booking(pickupaddress,date,time,dropofaddress,bookingstatus,cid,did) VALUES (%s,%s,%s,%s,%s,%s,%s)"""
     values=(bookingInfo.getPickupaddress(), bookingInfo.getDate(),
-            bookingInfo.getTime(), bookingInfo.getDropoffaddress(), bookingInfo.getBookingstatus(),
+            bookingInfo.getTime(), bookingInfo.getdropofaddress(), bookingInfo.getBookingstatus(),
             bookingInfo.getCid(), bookingInfo.getDid())
     insertResult=False
 
@@ -30,11 +30,11 @@ def insert_booking(bookingInfo):
 
 def update_booking(bookingInfo):
     conn=None
-    sql="""UPDATE booking SET pickupaddress=%s, date=%s, time=%s, dropoffaddress=%s, bookingstatus=%s,cid=%s, did=%s WHERE bookingid=%s"""
+    sql="""UPDATE booking SET pickupaddress=%s, date=%s, time=%s, dropofaddress=%s, bookingstatus=%s,cid=%s, did=%s WHERE bookingid=%s"""
     values=(bookingInfo.getPickupaddress(),
             bookingInfo.getDate(),
             bookingInfo.getTime(),
-            bookingInfo.getDropoffaddress(),
+            bookingInfo.getdropofaddress(),
             bookingInfo.getBookingstatus(),
             bookingInfo.getCid(),
             bookingInfo.getDid(),
@@ -164,11 +164,11 @@ def customerbooking_selectstatsubooked(cid):
 
 def update_customer_booking1(bookingInfo):
     conn=None
-    sql="""UPDATE booking SET pickupaddress=%s, date=%s, time=%s, dropoffaddress=%s WHERE bookingid=%s"""
+    sql="""UPDATE booking SET pickupaddress=%s, date=%s, time=%s, dropofaddress=%s WHERE bookingid=%s"""
     values=(bookingInfo.getPickupaddress(),
             bookingInfo.getDate(),
             bookingInfo.getTime(),
-            bookingInfo.getDropoffaddress(),
+            bookingInfo.getdropofaddress(),
             bookingInfo.getBookingid()
             )
     updatebookingResult=False
@@ -233,7 +233,7 @@ def customer_checkbooking(cidInfo):
 def active_booking12():
     conn=None
     sql="""select booking.bookingid, customers.name, booking.pickupaddress, 
-    booking.dropoffaddress, booking.date, booking.time,drivers.name, booking.bookingstatus
+    booking.dropofaddress, booking.date, booking.time,drivers.name, booking.bookingstatus
      from booking inner join customers on booking.cid=customers.cid inner join drivers 
      on booking.did=drivers.did where booking.bookingstatus='Booked'"""
     activeResult=None
